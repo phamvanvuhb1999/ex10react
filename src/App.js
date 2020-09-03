@@ -19,11 +19,22 @@ class App extends Component {
   }
 
   render() {
+    // if (this.List.length > 0) {
+    //   return (
+    //     <div className="App">
+    //       {this.List.map((item, index) => (
+    //         <Item key={index} item={item} />
+    //       ))}
+    //     </div>
+    //   );
+    // } else {
+    //   return <div>nothing here</div>;
+    // }
     return (
       <div className="App">
-        {this.List.map((item, index) => (
-          <Item key={index} item={item} />
-        ))}
+        {this.List.length > 0 &&
+          this.List.map((item, index) => <Item key={index} item={item} />)}
+        {this.List.length === 0 && "nothing here"}
       </div>
     );
   }
