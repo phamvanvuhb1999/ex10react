@@ -3,13 +3,13 @@ import "./Item.css";
 
 class Item extends Component {
   render() {
-    const item = this.props.item;
+    const { item, onClick } = this.props;
     let className = "Item";
     if (item.isComplete) {
       className += " Item-complete";
     }
     return (
-      <div className={className}>
+      <div onClick={onClick} className={className}>
         <p>{this.props.item.title}</p>
       </div>
     );
