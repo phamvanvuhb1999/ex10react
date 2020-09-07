@@ -3,9 +3,20 @@
   font-weight: 300;
   font-size: 24px;
   color: #444444;
+  display: flex;
+  margin: 20px 10px;
+  border-bottom: 3px solid #8f8888;
+  padding-bottom: 5px;
+  
 }
 
 .Item-complete {
   text-decoration: line-through;
   opacity: 0.3;
+}
+
+.Item >p {
+  color: #359e61;
+  
+  margin: 0 0 0 20px;
 }
